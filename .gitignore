@@ -35,8 +35,3 @@
 *.db
 datastruct/.vs/datastruct/v15/.suo
 datastruct/.vs/datastruct/v14/.suo
-*.pdb
-*.ilk
-*.tlog
-*.log
-*.idb
