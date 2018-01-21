@@ -94,20 +94,20 @@ namespace Main_2_6
 
 	int main_2_6()
 	{
-		Glist P1 = list_MakeEmpty(12);
-		Glist P2 = list_MakeEmpty(8);
-		Glist P3 = indi_MakeEmpty(3, 2);
+		Glist P1 = list_MakeEmpty(12);			//建立3个x的单元
+		Glist P2 = list_MakeEmpty(8);			//广义表
+		Glist P3 = indi_MakeEmpty(3, 2);		//个体单元
 
-		Glist list = add_member_down(P1, indi_MakeEmpty(9, 2));
+		Glist list = add_member_down(P1, indi_MakeEmpty(9, 2));	//在x12次方的广义表中中添加两个个体单元
 		add_member_right(list, indi_MakeEmpty(4, 0));
 
-		list = add_member_down(P2, indi_MakeEmpty(15, 3));
+		list = add_member_down(P2, indi_MakeEmpty(15, 3));	//在x8次方的广义表中中添加两个个体单元
 		add_member_right(list, indi_MakeEmpty(-1, 1));
 
-		list = add_member_right(P1, P2);
+		list = add_member_right(P1, P2);					//将p1 p2 p3连接起来
 		list = add_member_right(list, P3);
 
-		print(P1);
+		print(P1);										//打印表达式 (9y2 + 4y0)x12 + (15y3 - 1y1)x8 + 3x2
 
 		return 0;
 	}
