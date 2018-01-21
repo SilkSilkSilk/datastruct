@@ -9,8 +9,8 @@ using namespace std;
 
 int main()
 {
-	Main_2_2::main_2_2();
-	Main_2_4::main_2_4();
+//	Main_2_2::main_2_2();
+//	Main_2_4::main_2_4();
 
 	return 0;
 }
