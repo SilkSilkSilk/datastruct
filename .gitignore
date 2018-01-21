@@ -38,5 +38,10 @@ datastruct/.vs/datastruct/v14/.suo
 *.tlog
 *.log
 *.idb
+<<<<<<< HEAD
+datastruct/datastruct/2.5.h
+datastruct/datastruct/2.5.h
+=======
 *.pdb
 *.ilk
+>>>>>>> master
