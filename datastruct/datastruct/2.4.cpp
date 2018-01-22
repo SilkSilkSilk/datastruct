@@ -2,7 +2,7 @@
 
 
 namespace Main_2_4
-{
+{//链表操作-插入删除等
 	List MakeEmpty(const ElementType x)
 	{
 		List ptrL = nullptr;
@@ -144,7 +144,7 @@ namespace Main_2_4
 		cout << endl;
 	}
 
-	int main_2_4()
+	int main_2_4()		//链表操作-插入删除等
 	{
 		List ptrl = MakeEmpty(1);
 

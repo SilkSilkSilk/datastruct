@@ -3,7 +3,7 @@
 
 
 namespace Main_2_2
-{
+{//线性表操作
 	typedef int ElementType;
 #define MAXSIZE 1024
 

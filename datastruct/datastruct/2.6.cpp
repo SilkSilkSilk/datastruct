@@ -92,7 +92,7 @@ namespace Main_2_6
 	}
 
 
-	int main_2_6()
+	int main_2_6()		//广义表的应用
 	{
 		Glist P1 = list_MakeEmpty(12);			//建立3个x的单元
 		Glist P2 = list_MakeEmpty(8);			//广义表

@@ -85,7 +85,7 @@ namespace Main_2_2
 	}
 
 
-	int main_2_2()
+	int main_2_2()		//线性表操作
 	{
 		List ptrl = MakeEmpty();
 		insert(1, 0, ptrl);

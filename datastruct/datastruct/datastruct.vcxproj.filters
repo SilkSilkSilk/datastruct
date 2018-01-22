@@ -30,6 +30,9 @@
     <ClCompile Include="2.6.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="2.7.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="1.h">
@@ -42,6 +45,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="2.6.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="2.7.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
