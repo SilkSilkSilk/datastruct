@@ -13,6 +13,8 @@ namespace Main_2_7
 	typedef int ElementType;
 
 	typedef struct MNode *MList;
+//	typedef shared_ptr<struct MNode> MList;
+
 	struct MNode
 	{
 		int tag;		//区分term和head类型，非0行列节点表示term, term = 1 
@@ -31,6 +33,8 @@ namespace Main_2_7
 		}Urcvn;
 		
 		MList Right;		//接受右
+
+		~MNode();
 	};
 
 	#define Max_head 1024
@@ -38,6 +42,7 @@ namespace Main_2_7
 	extern shared_ptr<MNode[]> term;
 
 	MList Make_init(const vector<vector<int>> &list);
+	bool InsertTerm(int i, int j, int value);
 
 	int main_2_7();
 }
