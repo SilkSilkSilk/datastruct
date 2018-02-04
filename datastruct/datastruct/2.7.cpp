@@ -61,7 +61,7 @@ namespace Main_2_7
 		return &term[0];
 	}
 
-	void InsertTerm(const int i, const int j, const int value)		//顺序添加方法
+	void InsertTerm(const int i, const int j, const int value)		//顺序添加方法，从上往下，从左往右，就像二维数组一样
 	{
 //		MNode tm;										//临时变量会被销毁
 //		shared_ptr<MNode> tm = make_shared<MNode>();	//智能指针不能传递给普通的指针
