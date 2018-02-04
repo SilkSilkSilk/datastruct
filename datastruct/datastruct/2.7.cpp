@@ -2,7 +2,7 @@
 
 
 namespace Main_2_7
-{//多重链表矩阵存储的深入理解，思路已经清晰
+{//多重链表矩阵存储的实现
 
 	shared_ptr<MNode[]> term;
 
@@ -10,7 +10,7 @@ namespace Main_2_7
 	{
 		int m = list.size(), n = list[0].size();
 
-		cout << m << " " << n << endl;
+//		cout << m << " " << n << endl;	//测试vector的size函数用的
 
 		int nod = m > n ? m : n;		//取最大行列的最大数
 
@@ -34,7 +34,7 @@ namespace Main_2_7
 			term[i].tag = 0;
 			if(i == 1)
 			{
-				term[0].Right = &term[i];				//term头指向heard
+				term[0].Right = &term[1];				//term头指向heard
 			}
 			else
 			{
@@ -61,7 +61,7 @@ namespace Main_2_7
 		return &term[0];
 	}
 
-	bool InsertTerm(const int i, const int j, const int value)		//顺序添加方法
+	void InsertTerm(const int i, const int j, const int value)		//顺序添加方法
 	{
 //		MNode tm;										//临时变量会被销毁
 //		shared_ptr<MNode> tm = make_shared<MNode>();	//智能指针不能传递给普通的指针
@@ -70,6 +70,7 @@ namespace Main_2_7
 		tm->Urcvn.node.Row = i;
 		tm->Urcvn.node.Col = j;
 		tm->Urcvn.node.Value = value;
+		tm->tag = 1;
 
 		//列操作
 		MList ptr = &term[j + 1];
@@ -89,9 +90,49 @@ namespace Main_2_7
 		}
 		ptr->Right = tm;
 		tm->Right = &term[i + 1];
-
-		return false;
 	}
+
+	void print(MList & ls)				//循序遍历每一行的数据，利用row和col来填补数据到矩阵
+	{
+		MList ptr = ls;
+		MList pt = nullptr;
+
+		int m = ptr->Urcvn.node.Row;
+		int n = ptr->Urcvn.node.Col;
+
+		vector<vector<int>> a(m, vector<int>(n,0));		//初始化默认的矩阵
+
+		cout << "The list are " << ptr->Urcvn.node.Row << " rows and " << ptr->Urcvn.node.Col << " col,has " << ptr->Urcvn.node.Value << " data." <<endl;	//d打印行列数
+		ptr = ptr->Right;					//由term转向head
+
+		while (ptr != ls)					//换行更新head
+		{
+			pt = ptr;						//行head存储
+			while (ptr->Right != pt)		//遍历一行中的每个元素
+			{
+				ptr = ptr->Right;
+
+				if (ptr->tag == 1)			//防止遍历错误，确保对term元素提取数据
+				{
+					a[ptr->Urcvn.node.Row][ptr->Urcvn.node.Col] = ptr->Urcvn.node.Value;	//数据加入vector中
+				}
+				else
+				{
+					cout << "errer data at print" << endl;
+				}
+			}
+			ptr = pt->Urcvn.Next;			//换行更新head
+		}	
+		for (auto i : a)					//打印
+		{
+			for (auto j : i)
+			{
+				cout << j << " ";
+			}
+			cout << endl;
+		}
+	}
+
 
 
 	int main_2_7()		//多重链表的矩阵实例运用
@@ -103,16 +144,27 @@ namespace Main_2_7
 			{23, -1, 0, 0, 12}
 		};
 
-		Make_init(a);
+		cout << "the base data is:" << endl;
+		for (auto i : a)
+		{
+			for (auto j : i)
+			{
+				cout << j << " ";
+			}
+			cout << endl;
+		}
+		cout << endl;
 
-		
+		auto b = Make_init(a);
+
+		print(b);
 
 		return 0;
 	}
 	MNode::~MNode()
 	{
-		delete Down;
-		delete Right;
+//		delete Down;
+//		delete Right;
 
 //		if (tag != 1)
 //		{

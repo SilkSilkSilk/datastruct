@@ -42,7 +42,8 @@ namespace Main_2_7
 	extern shared_ptr<MNode[]> term;
 
 	MList Make_init(const vector<vector<int>> &list);
-	bool InsertTerm(int i, int j, int value);
+	void InsertTerm(int i, int j, int value);
+	void print(MList &ls);
 
 	int main_2_7();
 }
