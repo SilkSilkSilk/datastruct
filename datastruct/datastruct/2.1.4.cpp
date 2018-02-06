@@ -1,7 +1,7 @@
-#include "2.4.h"
+#include "2.1.4.h"
 
 
-namespace Main_2_4
+namespace Main_2_1_4
 {//链表操作-插入删除等
 	List MakeEmpty(const ElementType x)
 	{
@@ -144,7 +144,7 @@ namespace Main_2_4
 		cout << endl;
 	}
 
-	int main_2_4()		//链表操作-插入删除等
+	int main_2_1_4()		//链表操作-插入删除等
 	{
 		List ptrl = MakeEmpty(1);
 

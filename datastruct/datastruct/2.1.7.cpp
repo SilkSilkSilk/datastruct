@@ -1,7 +1,7 @@
-#include "2.7.h"
+#include "2.1.7.h"
 
 
-namespace Main_2_7
+namespace Main_2_1_7
 {//多重链表矩阵存储的实现
 
 	shared_ptr<MNode[]> term;
@@ -135,7 +135,7 @@ namespace Main_2_7
 
 
 
-	int main_2_7()		//多重链表的矩阵实例运用
+	int main_2_1_7()		//多重链表的矩阵实例运用
 	{
 		const vector<vector<int>> a = {
 			{18, 0, 0, 2, 0},

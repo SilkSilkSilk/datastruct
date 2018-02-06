@@ -1,10 +1,10 @@
-#ifndef __MAIN_2_6_H__
-#define __MAIN_2_6_H__
+#ifndef __MAIN_2_1_6_H__
+#define __MAIN_2_1_6_H__
 
 #include <iostream>
 
 
-namespace Main_2_6
+namespace Main_2_1_6
 {//广义表的应用
 	using namespace std;
 
@@ -34,7 +34,7 @@ namespace Main_2_6
 
 //	Glist Delete(const int i, Glist ptrl);
 	void print(Glist ptrl);
-	int main_2_6();
+	int main_2_1_6();
 }
 
 

@@ -1,12 +1,12 @@
-#ifndef __MAIN_2_7_H__
-#define __MAIN_2_7_H__
+#ifndef __MAIN_2_1_7_H__
+#define __MAIN_2_1_7_H__
 
 #include <iostream>
 #include <vector>
 #include <memory>
 
 
-namespace Main_2_7
+namespace Main_2_1_7
 {//多重链表的矩阵实例运用
 	using namespace std;
 
@@ -45,7 +45,7 @@ namespace Main_2_7
 	void InsertTerm(int i, int j, int value);
 	void print(MList &ls);
 
-	int main_2_7();
+	int main_2_1_7();
 }
 
 

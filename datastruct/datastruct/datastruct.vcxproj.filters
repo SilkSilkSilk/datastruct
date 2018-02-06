@@ -21,19 +21,19 @@
     <ClCompile Include="1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="2.2.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="2.4.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="2.6.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="2.7.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="2.2.2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="2.1.2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="2.1.4.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="2.1.6.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="2.1.7.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,19 +41,19 @@
     <ClInclude Include="1.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="2.2.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="2.4.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="2.6.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="2.7.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="2.2.2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="2.1.2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="2.1.4.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="2.1.6.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="2.1.7.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

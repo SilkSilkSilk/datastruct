@@ -2,7 +2,7 @@
 #define __MAIN_2_2_H__
 
 
-namespace Main_2_2
+namespace Main_2_1_2
 {//线性表操作
 	typedef int ElementType;
 #define MAXSIZE 1024
@@ -25,7 +25,7 @@ namespace Main_2_2
 	void insert(const ElementType x, const int i, List const ptrl);
 	void Delete(const int i, List const ptrl);
 	void print(List const ptrl);
-	int main_2_2();
+	int main_2_1_2();
 }
 
 

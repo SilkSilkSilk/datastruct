@@ -1,7 +1,7 @@
-#include "2.6.h"
+#include "2.1.6.h"
 
 
-namespace Main_2_6
+namespace Main_2_1_6
 {
 	Glist list_MakeEmpty(const ElementType index) //建立广义单元
 	{
@@ -92,7 +92,7 @@ namespace Main_2_6
 	}
 
 
-	int main_2_6()		//广义表的应用
+	int main_2_1_6()		//广义表的应用
 	{
 		Glist P1 = list_MakeEmpty(12);			//建立3个x的单元
 		Glist P2 = list_MakeEmpty(8);			//广义表

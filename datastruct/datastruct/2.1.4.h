@@ -1,10 +1,10 @@
-#ifndef __MAIN_2_4_H__
-#define __MAIN_2_4_H__
+#ifndef __MAIN_2_1_4_H__
+#define __MAIN_2_1_4_H__
 
 #include <iostream>
 
 
-namespace Main_2_4
+namespace Main_2_1_4
 {
 	using namespace std;
 
@@ -26,7 +26,7 @@ namespace Main_2_4
 	List insert(const ElementType x, const int i, List ptrl);
 	List Delete(const int i, List ptrl);
 	void print(List ptrl);
-	int main_2_4();
+	int main_2_1_4();
 }
 
 

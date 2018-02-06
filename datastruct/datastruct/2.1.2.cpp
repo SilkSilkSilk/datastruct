@@ -1,8 +1,8 @@
-#include "2.2.h"
+#include "2.1.2.h"
 #include <iostream>
 
 
-namespace Main_2_2
+namespace Main_2_1_2
 {
 	List MakeEmpty()
 	{
@@ -85,7 +85,7 @@ namespace Main_2_2
 	}
 
 
-	int main_2_2()		//线性表操作
+	int main_2_1_2()		//线性表操作
 	{
 		List ptrl = MakeEmpty();
 		insert(1, 0, ptrl);
