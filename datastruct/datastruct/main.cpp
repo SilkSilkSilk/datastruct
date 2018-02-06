@@ -16,8 +16,9 @@ int main()
 //	Main_2_4::main_2_1_4();
 //	Main_2_6::main_2_1_6();
 //	Main_2_7::main_2_1_7();
+//	Main_2_2_2::main_2_2_2();
 
-	Main_2_2_2::main_2_2_2();
+	Main_2_2_2_tow::main_2_2_2_tow();
 
 	return 0;
 }
