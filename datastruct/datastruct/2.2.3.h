@@ -1,4 +1,4 @@
-#ifndef __MAIN_2_2_3_H__
+ï»¿#ifndef __MAIN_2_2_3_H__
 #define __MAIN_2_2_3_H__
 
 #include <iostream>
@@ -7,7 +7,7 @@
 
 
 namespace Main_2_2_3
-{	//Ê¹ÓÃÄ£°åÀàÊµÏÖ²Ù×÷  Á´±íµÄ·½Ê½À´´æ´¢¶ÑÕ»£¬²»´æÔÚ¿Õ¼äÀË·Ñ
+{	//ä½¿ç”¨æ¨¡æ¿ç±»å®ç°æ“ä½œ  é“¾è¡¨çš„æ–¹å¼æ¥å­˜å‚¨å †æ ˆï¼Œä¸å­˜åœ¨ç©ºé—´æµªè´¹
 	using namespace std;
 
 	template<class T> class class_2_2_3
@@ -23,35 +23,33 @@ namespace Main_2_2_3
 			shared_ptr<SNode> Next;
 		};
 
-		typedef shared_ptr<SNode> Stack;			//ÖÇÄÜÖ¸Õë¹ÜÀíÄÚ´æ
-
+		typedef shared_ptr<SNode> Stack;			//æ™ºèƒ½æŒ‡é’ˆç®¡ç†å†…å­˜
+		Stack Snode_ptr;									//é“¾è¡¨çš„å¤´
 		int top;
 
-		Stack MakeEmpty();
+		void MakeEmpty();
 
-		void Push(Stack ptr, ElementType t);		//ÈëÕ»
+		void Push(ElementType t);		//å…¥æ ˆ
 
-		ElementType Pop(Stack ptrs);				//³öÕ»
+		ElementType Pop();				//å‡ºæ ˆ
 
-		int IsFull(Stack S);
-		int IsEmpty(Stack S);
+		int IsFull();
+		int IsEmpty();
 		
 	};
 
 	void main_2_2_3();
 
 	template<class T>
-	typename class_2_2_3<T>::Stack class_2_2_3<T>::MakeEmpty()		//Ê¹ÓÃtypenameÖ¸¶¨StackÊÇÒ»¸öÀàĞÍ£¬²»È»±àÒëÆ÷²»Ê¶±ğ
+	void class_2_2_3<T>::MakeEmpty()		
 	{
-		Stack ptr(new SNode());			//Í·½áµã²»±£´æÊı¾İÏàµ±ÓÚtop = -1
-		ptr->Next = nullptr;
-		ptr->Data = ERROR;
-
-		return ptr;
+		Snode_ptr = make_shared<SNode>();			//å¤´ç»“ç‚¹ä¸ä¿å­˜æ•°æ®ç›¸å½“äºtop = -1
+		Snode_ptr->Next = nullptr;
+		Snode_ptr->Data = ERROR;
 	}
 
 	template<class T>
-	inline void class_2_2_3<T>::Push(Stack ptr, ElementType t)
+	inline void class_2_2_3<T>::Push(ElementType t)
 	{
 		if (top >= MAX)
 		{
@@ -61,39 +59,39 @@ namespace Main_2_2_3
 
 		Stack p(new SNode());			
 		p->Data = t;
-		p->Next = ptr->Next;
-		ptr->Next = p;
+		p->Next = Snode_ptr->Next;
+		Snode_ptr->Next = p;
 
 		top++;
 	}
 
 	template<class T>
-	inline typename class_2_2_3<T>::ElementType class_2_2_3<T>::Pop(Stack ptr)
+	inline typename class_2_2_3<T>::ElementType class_2_2_3<T>::Pop()
 	{
-		if (ptr->Next == nullptr)
+		if (Snode_ptr->Next == nullptr)
 		{
 			cout << "no data" << endl;
 			return ERROR;
 		}
 
-		Stack p = ptr->Next;
+		Stack p = Snode_ptr->Next;
 
-		ptr->Next = p->Next;
+		Snode_ptr->Next = p->Next;
 		top--;
 
-		return p->Data;		//³öº¯ÊıÖ®ºópµÄ¼ÆÊıÎªÁã
+		return p->Data;		//å‡ºå‡½æ•°ä¹‹åpçš„è®¡æ•°ä¸ºé›¶
 	}
 
 	template<class T>
-	inline int class_2_2_3<T>::IsFull(Stack S)
+	inline int class_2_2_3<T>::IsFull()
 	{
 		return top == MAX ? 1 : 0;
 	}
 
 	template<class T>
-	inline int class_2_2_3<T>::IsEmpty(Stack S)
+	inline int class_2_2_3<T>::IsEmpty()
 	{
-		return S->Next == nullptr ? 1 : 0;
+		return Snode_ptr->Next == nullptr ? 1 : 0;
 	}
 
 }

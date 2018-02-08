@@ -1,21 +1,21 @@
-#include "2.2.3.h"
+ï»¿#include "2.2.3.h"
 
 
 namespace Main_2_2_3
 {
 	void main_2_2_3()
 	{
-		class_2_2_3<int> p;			//Ä£°åÀà¹ÜÀí¶ÑÕ»£¬¶ÑÕ»Ê¹ÓÃÁ´±íÀ´ÊµÏÖ
-									//Ä£°åÀàÊ¹µÃclass_2_2_3¸üÏñvectorµÈ±ê×¼ÈİÆ÷µÄ²Ù×÷--Ò»¸öÄ£°åÀà¶ÔÏó¹ÜÀíÒ»¸ö¶ÑÕ»
-		auto a = p.MakeEmpty();
+		class_2_2_3<int> p;			//æ¨¡æ¿ç±»ç®¡ç†å †æ ˆï¼Œå †æ ˆä½¿ç”¨é“¾è¡¨æ¥å®ç°
+									//æ¨¡æ¿ç±»ä½¿å¾—class_2_2_3æ›´åƒvectorç­‰æ ‡å‡†å®¹å™¨çš„æ“ä½œ--ä¸€ä¸ªæ¨¡æ¿ç±»å¯¹è±¡ç®¡ç†ä¸€ä¸ªå †æ ˆ
+		p.MakeEmpty();
 		
-		p.Push(a, 1);				//ÈëÕ»
-		p.Push(a, 11);
-		p.Push(a, 111);
+		p.Push(1);				//å…¥æ ˆ
+		p.Push(11);
+		p.Push(111);
 
-		cout << p.Pop(a) << endl;	//³öÕ»
-		cout << p.Pop(a) << endl;
-		cout << p.Pop(a) << endl;
-		cout << p.Pop(a) << endl;	//Ã»ÓĞÊı¾İÊ±¼ì²â´íÎó
+		cout << p.Pop() << endl;	//å‡ºæ ˆ
+		cout << p.Pop() << endl;
+		cout << p.Pop() << endl;
+		cout << p.Pop() << endl;	//æ²¡æœ‰æ•°æ®æ—¶æ£€æµ‹é”™è¯¯
 	}
 }
