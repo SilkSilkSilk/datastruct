@@ -46,6 +46,7 @@ namespace Main_2_2_3
 		Snode_ptr = make_shared<SNode>();			//头结点不保存数据相当于top = -1
 		Snode_ptr->Next = nullptr;
 		Snode_ptr->Data = ERROR;
+		top = -1;
 	}
 
 	template<class T>
