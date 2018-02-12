@@ -39,7 +39,10 @@
     <ClCompile Include="2.2.3.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="2.2.4.cpp">
+    <ClCompile Include="2.2.4.1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="2.2.4.2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -65,7 +68,10 @@
     <ClInclude Include="2.2.3.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="2.2.4.h">
+    <ClInclude Include="2.2.4.1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="2.2.4.2.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

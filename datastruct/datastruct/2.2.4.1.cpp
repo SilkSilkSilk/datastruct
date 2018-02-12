@@ -1,7 +1,7 @@
-﻿#include "2.2.4.h"
+﻿#include "2.2.4.1.h"
 
 
-namespace Main_2_2_4
+namespace Main_2_2_4_1
 {
 	Mytype::Mytype():
 	value(),
@@ -55,11 +55,7 @@ namespace Main_2_2_4
 	{
 		int num = s.size();
 
-		Main_2_2_3::class_2_2_3<Mytype> op_data;	//数据栈
-		op_data.MakeEmpty();
-
-		Main_2_2_3::class_2_2_3<Mytype> op_type;	//运算符栈
-		op_type.MakeEmpty();
+		
 
 
 
@@ -70,7 +66,7 @@ namespace Main_2_2_4
 
 	}
 
-	void main_2_2_4()
+	void main_2_2_4_1()
 	{
 		vector<Mytype> Vm;
 

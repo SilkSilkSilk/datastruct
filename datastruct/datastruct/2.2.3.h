@@ -33,9 +33,21 @@ namespace Main_2_2_3
 
 		ElementType Pop();				//出栈
 
+		ElementType Top()				//获取当前数据，不出栈
+		{
+			if (Snode_ptr->Next == nullptr)
+			{
+				cout << "no data" << endl;
+				return ElementType(ERROR);
+			}
+
+			Stack p = Snode_ptr->Next;
+
+			return p->Data;		//出函数之后p的计数为零
+		}
+
 		int IsFull();
 		int IsEmpty();
-		
 	};
 
 	void main_2_2_3();
@@ -72,7 +84,7 @@ namespace Main_2_2_3
 		if (Snode_ptr->Next == nullptr)
 		{
 			cout << "no data" << endl;
-			return ERROR;
+			return ElementType(ERROR);
 		}
 
 		Stack p = Snode_ptr->Next;

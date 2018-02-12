@@ -1,5 +1,5 @@
-﻿#ifndef __MAIN_2_2_4_H__
-#define __MAIN_2_2_4_H__
+﻿#ifndef __MAIN_2_2_4_1_H__
+#define __MAIN_2_2_4_1_H__
 
 #include <iostream>
 #include <vector>
@@ -9,7 +9,7 @@
 #include "2.2.3.h"
 
 
-namespace Main_2_2_4
+namespace Main_2_2_4_1
 {
 	using namespace std;
 
@@ -35,7 +35,7 @@ namespace Main_2_2_4
 	void ordinary_expression(vector<Mytype> s);
 	void brackets_expression(vector<Mytype> s);
 
-	void main_2_2_4();
+	void main_2_2_4_1();
 }
 
 #endif
