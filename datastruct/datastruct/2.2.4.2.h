@@ -10,7 +10,7 @@
 
 
 namespace Main_2_2_4_2
-{
+{	//使用中缀表达式堆栈的编程方法实现了表达式计算
 	using namespace std;
 
 	class Mytype
