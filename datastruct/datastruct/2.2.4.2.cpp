@@ -189,27 +189,25 @@ namespace Main_2_2_4_2
 
 	void main_2_2_4_2()
 	{
+		string a("(3+2)*(5+2)");
+
 		vector<Mytype> Vm;
 
-		Mytype p;
-		p.make_Mytype_data(3);
-		Vm.push_back(p);
+		for (auto i : a)				//解析字符串
+		{
+			Mytype p;
 
-		Mytype p1;
-		p1.make_Mytype_type(string("+"));
-		Vm.push_back(p1);
+			if (i >= 48 && i <= 57)		//判断字符是数字还是符号
+			{
+				p.make_Mytype_data(i - 48);
+			}
+			else						//还应该检测()和运算符，过滤掉错误字符
+			{
+				p.make_Mytype_type(string(1, i));	//i是char类型,初始化1个char字符
+			}
 
-		Mytype p2;
-		p2.make_Mytype_data(2);
-		Vm.push_back(p2);
-
-		Mytype p3;
-		p3.make_Mytype_type(string("*"));
-		Vm.push_back(p3);
-
-		Mytype p4;
-		p4.make_Mytype_data(5);
-		Vm.push_back(p4);
+			Vm.push_back(p);
+		}
 
 		for (auto &i : Vm)
 		{
