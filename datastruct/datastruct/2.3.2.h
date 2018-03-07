@@ -8,7 +8,7 @@
 
 
 namespace Main_2_3_2
-{	//链表实现循环队列
+{	//链表实现队列
 	using namespace std;
 
 

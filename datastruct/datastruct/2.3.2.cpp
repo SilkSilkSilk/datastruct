@@ -1,7 +1,7 @@
 ﻿#include "2.3.2.h"
 
 namespace Main_2_3_2
-{	//链表实现循环队列
+{	//链表实现队列
 
 	void main_2_3_2()
 	{
