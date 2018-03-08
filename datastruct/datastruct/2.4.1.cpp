@@ -26,7 +26,8 @@ namespace Main_2_4_1
 		c.AddQ(PolyNode(1, 1));
 
 		auto num = a + b + c;				//operator+实现连续+运算
-		num.print();
+
+		num.print();						//打印结果
 	}
 
 	template<class T>
