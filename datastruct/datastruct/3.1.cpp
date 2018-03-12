@@ -1,7 +1,7 @@
 ﻿#include "3.1.h"
 
 namespace Main_3_1
-{	//数组实现循环队列
+{	//顺序查找和二分查找
 
 	void main_3_1()
 	{

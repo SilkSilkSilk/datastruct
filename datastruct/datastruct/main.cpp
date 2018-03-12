@@ -11,6 +11,7 @@
 #include "2.4.1.h"
 #include "2.5.h"
 #include "3.1.h"
+#include "3.2.2.h"
 
 
 using namespace std;
@@ -29,8 +30,9 @@ int main()
 //	Main_2_3_2::main_2_3_2();				//链表实现循环队列
 //	Main_2_4_1::main_2_4_1();				//实现多项式存储和+运算
 //	Main_2_5::main_2_5();					//实现多项式存储和*运算
+//	Main_3_1::main_3_1();					//顺序查找和二分查找
 
-	Main_3_1::main_3_1();
+	Main_3_2_2::main_3_2_2();
 
 	return 0;
 }

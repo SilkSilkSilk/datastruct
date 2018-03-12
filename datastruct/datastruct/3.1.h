@@ -9,7 +9,7 @@
 
 
 namespace Main_3_1
-{	//数组实现循环队列
+{	//顺序查找和二分查找
 	using namespace std;
 
 
@@ -69,7 +69,7 @@ namespace Main_3_1
 		
 		}
 
-		int Binary_search(SList s, T k)
+		int Binary_search(SList s, T k)						//时间复杂度〖log〗_2 n
 		{
 			int left, right, mid;
 
