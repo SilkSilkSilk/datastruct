@@ -126,6 +126,7 @@
     <ClCompile Include="2.3.2.cpp" />
     <ClCompile Include="2.4.1.cpp" />
     <ClCompile Include="2.5.cpp" />
+    <ClCompile Include="3.1.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +143,7 @@
     <ClInclude Include="2.3.2.h" />
     <ClInclude Include="2.4.1.h" />
     <ClInclude Include="2.5.h" />
+    <ClInclude Include="3.1.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
