@@ -42,7 +42,7 @@ namespace Main_3_2_2
 		}
 
 		//先序创建二叉树
-		BinTree BinTree_Creat(const vector<int>& s)
+		BinTree BinTree_Creat(const vector<T>& s)
 		{
 			++BinTree_size;
 			BinTree bt;
@@ -69,7 +69,7 @@ namespace Main_3_2_2
 		}
 
 		//先序和中序创建二叉树
-		BinTree BinTree_Creat(vector<int> &s1, vector<int> &s2)
+		BinTree BinTree_Creat(vector<T> &s1, vector<T> &s2)
 		{
 			if (s1.empty() || s2.empty())
 			{
@@ -77,10 +77,10 @@ namespace Main_3_2_2
 			}
 
 			BinTree bt;
-			vector<int> s1_l, s1_r;
-			vector<int> s2_l, s2_r;
+			vector<T> s1_l, s1_r;
+			vector<T> s2_l, s2_r;
 
-			vector<int>::iterator it = find(s2.begin(), s2.end(), s1[0]);	//在中序数组中找左右子树
+			vector<T>::iterator it = find(s2.begin(), s2.end(), s1[0]);	//在中序数组中找左右子树
 			if (it != s2.end())	//找不到应该是错误
 			{
 				s2_l.insert(s2_l.begin(), s2.begin(), it);		//左子树
@@ -106,45 +106,8 @@ namespace Main_3_2_2
 			return bt;
 		}
 
-//		后序和中序创建二叉树
-		/*BinTree BinTree_Creat_end(vector<int> &s1, vector<int> &s2)
-		{
-			if (s1.empty() || s2.empty())
-			{
-				return nullptr;
-			}
-
-			BinTree bt;
-			vector<int> s1_l, s1_r;
-			vector<int> s2_l, s2_r;
-
-			vector<int>::iterator it = find(s2.begin(), s2.end(), s1.back());	//在中序数组中找左右子树
-			if (it != s2.end())	//找不到应该是错误
-			{
-				s2_l.insert(s2_l.begin(), s2.begin(), it);		//左子树
-				s2_r.insert(s2_r.begin(), it + 1, s2.end());		//右子树
-			}
-
-			if (!s2_r.empty())	//右子树不为空
-			{
-				s1_l.insert(s1_l.begin(), s1.begin(), s1.end() - s2_r.size() - 1);			//左子树
-				s1_r.insert(s1_r.begin(), s1.end() - s2_r.size() - 1, s1.end() - 1);		//右子树
-			}
-			else
-			{
-				s1_l.insert(s1_l.begin(), s1.begin(), s1.end() - 1);						//左子树
-			}
-
-			bt = make_shared<TreeNode>();
-			bt->Data = s1.back();
-			bt->Left = BinTree_Creat_end(s1_l, s2_l);
-			bt->Right = BinTree_Creat_end(s1_r, s2_r);
-
-			return bt;
-		}*/
-
 		//后序和中序创建二叉树---优化vector的重复拷贝
-		BinTree BinTree_Creat_end(vector<int> &s1, vector<int> &s2, int s1_l , int s1_r, int s2_l, int s2_r)
+		BinTree BinTree_Creat_end(vector<T> &s1, vector<T> &s2, int s1_l , int s1_r, int s2_l, int s2_r)
 		{
 			if (s1_l > s1_r || s2_l > s2_r)
 			{
@@ -171,13 +134,13 @@ namespace Main_3_2_2
 			return bt;
 		}
 
-		class_3_2_2(const vector<int> &s, const int max_size = 1024) : BinTree_size(-1)	//先序创建二叉树
+		class_3_2_2(const vector<T> &s, const int max_size = 1024) : BinTree_size(-1)	//先序创建二叉树
 		{
 			BinTree_Maxsize = max_size;
 			local_tree = BinTree_Creat(s);  //最后返回根
 		}
 
-		class_3_2_2(vector<int> &s1, vector<int> &s2, const int a, const int max_size = 1024) : BinTree_size(-1)	//先序(后序)和中序创建二叉树
+		class_3_2_2(vector<T> &s1, vector<T> &s2, const int a, const int max_size = 1024) : BinTree_size(-1)	//先序(后序)和中序创建二叉树
 		{
 			if (a == 0 || a == 1)
 			{
@@ -342,12 +305,72 @@ namespace Main_3_2_2
 			else
 				return 0;
 		}
+		
+		bool Is_morphic(BinTree bt1, BinTree bt2)		//判断树是否是同构 true为同构
+		{
+			if (bt1 == nullptr && bt2 == nullptr)		//都为空 
+			{
+				return true;
+			}
+
+			if ((bt1 == nullptr && bt2 != nullptr) || (bt1 != nullptr && bt2 == nullptr))		//一个为空另一个不为空
+			{
+				return false;
+			}
+
+			if (bt1->Data != bt2->Data)		//根节点的值不一样 
+			{
+				return false;
+			}
+
+			bool flag1, flag2;
+
+			if (Is_morphic(bt1->Left, bt2->Left) == false)
+			{
+				flag1 = Is_morphic(bt1->Left, bt2->Right);
+			}
+			else
+			{
+				flag1 = true;
+			}
+
+			if (Is_morphic(bt1->Right, bt2->Right) == false)
+			{
+				flag2 = Is_morphic(bt1->Right, bt2->Left);
+			}
+			else
+			{
+				flag2 = true;
+			}
+
+			return (flag1 && flag2);
+		}
+
+		//判断两棵树是否同构  
+		int Isomorphic(BinTree t1, BinTree t2) 
+		{
+			if ((t1 == NULL) && (t2 == NULL))return 1;		//都为空 
+			
+			if (((t1 == NULL) && (t2 != NULL)) || ((t1 != NULL) && (t2 == NULL))) return 0;		//一个为空另一个不为空 
+			
+			if (t1->Data != t2->Data) return 0;		//根节点的值不一样  
+
+			if ((t1->Left == NULL) && (t2->Left == NULL)) return Isomorphic(t1->Left, t2->Right);
+
+			if (((t1->Left != NULL) && (t2->Left != NULL)) && (t1->Left->Data == t2->Left->Data))		//没有交换  
+				return (Isomorphic(t1->Left, t2->Left) && Isomorphic(t1->Right, t2->Right));		//如果两个都不为空且左儿子相等，应该递归的找左对应左，右对应右  
+			else
+				return (Isomorphic(t1->Left, t2->Right) && Isomorphic(t1->Right, t2->Left));		//否则就是交换了，递归的判断左对应右，右对应左  
+		};
 
 	};
 
+	
+
 	void main_3_2_2();
 	void main_3_2_2_new();
-
+	void main_3_2_2_morphic();
+	void main_3_2_2_morphic_new();
 }
 
 #endif
