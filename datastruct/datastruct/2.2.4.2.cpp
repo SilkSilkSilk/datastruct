@@ -160,7 +160,7 @@ namespace Main_2_2_4_2
 								}
 							}
 
-							stack_type.Push(i);			//当2+3*5运算完后将-入栈
+							stack_type.Push(i);			//当2+3-5运算完后将-入栈
 						}
 					}
 				}
@@ -199,7 +199,7 @@ namespace Main_2_2_4_2
 
 			if (i >= 48 && i <= 57)		//判断字符是数字还是符号
 			{
-				p.make_Mytype_data(i - 48);
+				p.make_Mytype_data(static_cast<float>(i - 48));
 			}
 			else						//还应该检测()和运算符，过滤掉错误字符
 			{

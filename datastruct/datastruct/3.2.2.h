@@ -175,6 +175,7 @@ namespace Main_3_2_2
 				PreOrderTraversal(bt->Left);
 				PreOrderTraversal(bt->Right);
 			}
+			cout << endl;
 		}
 
 		void InOrderTraversal(BinTree bt)		//递归中序
@@ -185,6 +186,7 @@ namespace Main_3_2_2
 				cout << bt->Data << ' ';
 				InOrderTraversal(bt->Right);
 			}
+			cout << endl;
 		}
 
 		void PostOrderTraversal(BinTree bt)		//递归后序
@@ -195,6 +197,7 @@ namespace Main_3_2_2
 				PostOrderTraversal(bt->Right);
 				cout << bt->Data << ' ';
 			}
+			cout << endl;
 		}
 		 
 		void PreOrderTraversal_stack(BinTree bt)		//堆栈前序
@@ -218,6 +221,7 @@ namespace Main_3_2_2
 					bt = bt->Right;
 				}
 			}
+			cout << endl;
 		}
 
 		void InOrderTraversal_stack(BinTree bt)		//堆栈中序
@@ -240,6 +244,7 @@ namespace Main_3_2_2
 					bt = bt->Right;
 				}
 			}
+			cout << endl;
 		}
 
 		void PostOrderTraversal_stack(BinTree bt)		//堆栈后序
@@ -268,6 +273,7 @@ namespace Main_3_2_2
 					bt = nullptr;
 				}
 			}
+			cout << endl;
 		}
 
 		void LevelOrderTraversal(BinTree bt)	//层序遍历
@@ -290,6 +296,7 @@ namespace Main_3_2_2
 					qt.push(bt->Right);
 				}
 			}
+			cout << endl;
 		}
 
 		int PostOrderGetHeight(BinTree bt)
