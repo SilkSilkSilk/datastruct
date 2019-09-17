@@ -16,6 +16,7 @@
 #include "5.1.h"
 #include "6.3.h"
 #include "6.5.h"
+#include "6.5.1.h"
 
 
 using namespace std;
@@ -41,8 +42,9 @@ int main()
 //	Main_3_2_2::main_3_2_2_morphic_new();	//二叉树的同构
 //	Main_5_1::main_5_1();					//数组实现完全二叉树
 //	Main_6_3::main_6_3();					//007踩鳄鱼过河情节转换为图来处理
+//	Main_6_5::main_6_5();					//二维数组实现图
 
-	Main_6_5::main_6_5();
+	Main_6_5_1::main_6_5_1();				//链表实现图
 
 	return 0;
 }

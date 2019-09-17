@@ -76,12 +76,14 @@ namespace Main_6_5
 	template<class T>
 	inline void class_6_5<T>::InsertEdge(Edge E)
 	{
-		if (E == nullptr || E->V1 > Nv || E->V2 > Nv)
+		if (E == nullptr || E->V1 >= Nv || E->V2 >= Nv)
 			return;
 
 		*VertexEdge[E->V1]->at(E->V2) = E->weight;
+		Ne++;
 		//ÎÞÏòÍ¼
 		*VertexEdge[E->V2]->at(E->V1) = E->weight;
+		Ne++;
 	}
 
 	template<class T>

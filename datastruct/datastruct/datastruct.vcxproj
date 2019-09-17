@@ -132,6 +132,7 @@
     <ClCompile Include="4.1.cpp" />
     <ClCompile Include="5.1.cpp" />
     <ClCompile Include="6.3.cpp" />
+    <ClCompile Include="6.5.1.cpp" />
     <ClCompile Include="6.5.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -155,6 +156,7 @@
     <ClInclude Include="4.1.h" />
     <ClInclude Include="5.1.h" />
     <ClInclude Include="6.3.h" />
+    <ClInclude Include="6.5.1.h" />
     <ClInclude Include="6.5.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
