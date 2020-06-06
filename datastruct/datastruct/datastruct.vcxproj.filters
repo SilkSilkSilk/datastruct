@@ -81,6 +81,9 @@
     <ClCompile Include="6.5.1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="9.1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="1.h">
@@ -144,6 +147,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="6.5.1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="9.1.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
