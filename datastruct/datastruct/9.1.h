@@ -7,6 +7,7 @@
 #include <string>
 #include <stack>
 #include <queue>
+//#include <boost/lexical_cast.hpp>
 
 namespace Main_9_1
 {	//≈≈–Ú
@@ -23,12 +24,15 @@ namespace Main_9_1
 	template <class T>
 	void print(T array[], int n)
 	{
+		if (array == nullptr)
+			return;
 		for (int i = 0; i < n; i++)
 		{
 			cout << array[i] << " ";
 		}
 		cout << endl;
 	}
+
 	void main_9_1();
 }
 
