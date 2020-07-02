@@ -84,6 +84,12 @@
     <ClCompile Include="9.1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="10.1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="myiterator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="1.h">
@@ -150,6 +156,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="9.1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="10.1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="myiterator.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

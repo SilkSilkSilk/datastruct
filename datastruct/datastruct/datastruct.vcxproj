@@ -114,6 +114,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="1.cpp" />
+    <ClCompile Include="10.1.cpp" />
     <ClCompile Include="2.2.2.cpp" />
     <ClCompile Include="2.1.2.cpp" />
     <ClCompile Include="2.1.4.cpp" />
@@ -136,9 +137,11 @@
     <ClCompile Include="6.5.cpp" />
     <ClCompile Include="9.1.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="myiterator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="1.h" />
+    <ClInclude Include="10.1.h" />
     <ClInclude Include="2.2.2.h" />
     <ClInclude Include="2.1.2.h" />
     <ClInclude Include="2.1.4.h" />
@@ -160,6 +163,7 @@
     <ClInclude Include="6.5.1.h" />
     <ClInclude Include="6.5.h" />
     <ClInclude Include="9.1.h" />
+    <ClInclude Include="myiterator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
