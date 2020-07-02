@@ -19,6 +19,7 @@
 #include "6.5.1.h"
 #include "9.1.h"
 #include "10.1.h"
+#include "11.2.h"
 
 using namespace std;
 
@@ -47,8 +48,9 @@ int main()
 //	Main_6_5_1::main_6_5_1();				//链表实现图
 //  Main_6_5::main_6_5();					//二维数组实现图
 //	Main_9_1::main_9_1();					//一些简单的排序算法：插入、选择、shell、冒泡、归并、快速、桶、基数桶、堆排序
+//	Main_10_1::main_10_1();					//简单的hash_map 取余法+二次探测
 
-	Main_10_1::main_10_1();					//简单的hash_map 取余法+二次探测
+	Main_11_2::main_11_2();					//256叉trie树实现倒排索引，代码需要一个叫jieba的分词软件才可以用
 
 	return 0;
 }
