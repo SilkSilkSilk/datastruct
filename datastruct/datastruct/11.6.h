@@ -4,7 +4,7 @@
 #include <iostream>
 
 namespace Main_11_6
-{	//红黑树实现--目前插入还有问题
+{	//红黑树实现
 	
 	using namespace std;
 
@@ -171,7 +171,13 @@ namespace Main_11_6
 				{
 					if (cur_node == fat_node->left && fat_node == gra_node->left)	//左左
 					{
-						fat_node->father = gra_node->father;
+						if (gra_node->father)
+							if (gra_node == gra_node->father->left)
+								set_node_left(gra_node->father, fat_node);
+							else
+								set_node_right(gra_node->father, fat_node);
+						else
+							fat_node->father = gra_node->father;
 						gra_node->father = fat_node;
 
 						set_node_left(gra_node, fat_node->right);
@@ -183,7 +189,13 @@ namespace Main_11_6
 					}
 					else if (cur_node == fat_node->right && fat_node == gra_node->right)	//右右
 					{
-						fat_node->father = gra_node->father;
+						if (gra_node->father)
+							if (gra_node == gra_node->father->left)
+								set_node_left(gra_node->father, fat_node);
+							else
+								set_node_right(gra_node->father, fat_node);
+						else
+							fat_node->father = gra_node->father;
 						gra_node->father = fat_node;
 
 						set_node_right(gra_node, fat_node->left);
@@ -195,7 +207,13 @@ namespace Main_11_6
 					}
 					else if (cur_node == fat_node->left && fat_node == gra_node->right)		//右左
 					{
-						cur_node->father = gra_node->father;
+						if (gra_node->father)
+							if (gra_node == gra_node->father->left)
+								set_node_left(gra_node->father, cur_node);
+							else
+								set_node_right(gra_node->father, cur_node);
+						else
+							fat_node->father = gra_node->father;
 						gra_node->father = cur_node;
 						fat_node->father = cur_node;
 
@@ -210,7 +228,13 @@ namespace Main_11_6
 					}
 					else /*if (cur_node == fat_node->right && fat_node == gra_node->left)*/		//左右
 					{
-						cur_node->father = gra_node->father;
+						if (gra_node->father)
+							if (gra_node == gra_node->father->left)
+								set_node_left(gra_node->father, cur_node);
+							else
+								set_node_right(gra_node->father, cur_node);
+						else
+							fat_node->father = gra_node->father;
 						gra_node->father = cur_node;
 						fat_node->father = cur_node;
 
@@ -236,7 +260,7 @@ namespace Main_11_6
 			}
 		}
 		cur_node->color = hbcolor_black;
-		//tree = cur_node;
+		tree = cur_node;
 		return true;
 	}
 

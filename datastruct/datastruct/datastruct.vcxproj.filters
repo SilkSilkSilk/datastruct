@@ -90,6 +90,12 @@
     <ClCompile Include="myiterator.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="11.2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="11.6.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="1.h">
@@ -162,6 +168,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="myiterator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="11.2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="11.6.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

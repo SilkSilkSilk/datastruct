@@ -269,7 +269,7 @@ namespace Main_11_2
 			if (!inFile)  //条件成立，则说明文件打开成功
 			{
 				cout << "test.txt doesn't exist" << endl;
-				return -1;
+				return;
 			}
 			int offset = 0;
 			cout << "book open success: 《" << books[i] << "》" << endl;
@@ -344,7 +344,7 @@ namespace Main_11_2
 					if (!inFile)
 					{
 						cout << "test.txt doesn't exist" << endl;
-						return -1;
+						return;
 					}
 					inFile.seekg(item.offset > 0 ? item.offset : 0, ios::beg);
 					char context[11];

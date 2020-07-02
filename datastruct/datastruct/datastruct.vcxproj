@@ -115,6 +115,8 @@
   <ItemGroup>
     <ClCompile Include="1.cpp" />
     <ClCompile Include="10.1.cpp" />
+    <ClCompile Include="11.2.cpp" />
+    <ClCompile Include="11.6.cpp" />
     <ClCompile Include="2.2.2.cpp" />
     <ClCompile Include="2.1.2.cpp" />
     <ClCompile Include="2.1.4.cpp" />
@@ -142,6 +144,8 @@
   <ItemGroup>
     <ClInclude Include="1.h" />
     <ClInclude Include="10.1.h" />
+    <ClInclude Include="11.2.h" />
+    <ClInclude Include="11.6.h" />
     <ClInclude Include="2.2.2.h" />
     <ClInclude Include="2.1.2.h" />
     <ClInclude Include="2.1.4.h" />

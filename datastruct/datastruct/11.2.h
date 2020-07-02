@@ -15,6 +15,7 @@
 namespace Main_11_2
 {	//256叉trie树实现倒排索引，代码需要一个叫jieba的分词软件才可以用
 	using namespace std;
+	#define _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS
 
 /**
  * \brief utf8的256叉trie树
