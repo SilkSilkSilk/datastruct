@@ -138,6 +138,7 @@
     <ClCompile Include="6.5.1.cpp" />
     <ClCompile Include="6.5.cpp" />
     <ClCompile Include="9.1.cpp" />
+    <ClCompile Include="Leetcode.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="myiterator.cpp" />
   </ItemGroup>
@@ -167,6 +168,7 @@
     <ClInclude Include="6.5.1.h" />
     <ClInclude Include="6.5.h" />
     <ClInclude Include="9.1.h" />
+    <ClInclude Include="Leetcode.h" />
     <ClInclude Include="myiterator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

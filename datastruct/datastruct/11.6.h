@@ -4,7 +4,7 @@
 #include <iostream>
 
 namespace Main_11_6
-{	//红黑树实现
+{	//红黑树实现--插入修复
 	
 	using namespace std;
 
