@@ -38,12 +38,51 @@ public:
 		}
 		return value;
 	}
+
+	bool isValid(string s) {
+		int n = s.size();
+		if (n == 0)
+			return true;
+		if (n % 2 != 0)
+			return false;
+		for (auto &ch : s)
+		{
+			if (ch == '(')
+				ch = 1;
+			else if (ch == ')')
+				ch = -1;
+			else if (ch == '{')
+				ch = 2;
+			else if (ch == '}')
+				ch = -2;
+			else if (ch == '[')
+				ch = 3;
+			else if (ch == ']')
+				ch = -3;
+			else
+				return false;
+		}
+		stack<int8_t> stk;
+		for (int i = 0; i < n; i++)
+		{
+			if (s[i] > 0)
+				stk.push(s[i]);
+			else if (s[i] < 0)
+			{
+				if (stk.empty())
+					return false;
+				if (-stk.top() != s[i])
+					return false;
+				stk.pop();
+			}
+		}
+		return stk.empty();
+	}
 };
 
 void main_Leetcode()
 {
 	Solution solution;
-	vector<int> vr = { 0, 2, 1, -3 };
-	cout << solution.threeSumClosest(vr, 1) << endl;
+	cout << solution.isValid(string("(){}[]")) << endl;
 }
 
