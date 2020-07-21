@@ -216,32 +216,33 @@ public:
 		}
 		return ret_r;
 	}
+
+	int removeDuplicates(vector<int>& nums) {
+		if (nums.empty())
+			return 0;
+		if (nums.size() == 1)
+			return 1;
+		uint32_t i = 0;
+		for( ; i < nums.size() - 1;)
+		{
+			if (nums[i] == nums[i + 1])
+			{
+				nums.erase(nums.begin() + i + 1);
+			}
+			else
+			{
+				i++;
+				continue;
+			}
+		}
+		return i + 1;
+	}
 };
 
 void main_Leetcode()
 {
 	Solution solution;
-
-	vector<Solution::ListNode*> lists;
-	Solution::ListNode a1(1);
-	Solution::ListNode a2(2);
-	Solution::ListNode a3(3);
-	a1.next = &a2;
-	a2.next = &a3;
-	Solution::ListNode b1(4);
-	Solution::ListNode b2(6);
-	Solution::ListNode b3(7);
-	b1.next = &b2;
-	b2.next = &b3;
-	lists.push_back(&a1);
-	lists.push_back(&b1);
-	Solution::ListNode* ret = solution.mergeKLists(lists);
-	while(ret)
-	{
-		cout << ret->val << " ";
-		ret = ret->next;
-	}
-
-	cout << solution.isValid(string("(){}[]")) << endl;
+	vector<int> vr = { 0, 1, 1, 1, 1, 2 };
+	cout << solution.removeDuplicates(vr) << endl;
 }
 
