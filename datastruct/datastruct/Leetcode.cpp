@@ -237,12 +237,124 @@ public:
 		}
 		return i + 1;
 	}
+
+	int search(vector<int>& nums, int target) {
+		if (nums.size() == 0)
+			return -1;
+
+		int dir_t, dir_m;
+		if (target > nums[0])
+		{
+			dir_t = 1;
+		}
+		else if(target < nums[0])
+		{
+			dir_t = 2;
+		}
+		else
+		{
+			return 0;
+		}
+
+		int left = 0, right = nums.size() - 1, mid;
+
+		while(left <= right)
+		{
+			mid = (left + right) / 2;
+			if (nums[mid] >= nums[0])
+			{
+				dir_m = 1;
+			}
+			else
+			{
+				dir_m = 2;
+			}
+
+			if (dir_m == dir_t)
+			{
+				if (target > nums[mid])
+				{
+					if (dir_t == 1)
+					{
+						left = mid + 1;
+					}
+					else
+					{
+						left = mid + 1;
+						while (left <= right)
+						{
+							mid = (left + right) / 2;
+							if (nums[mid] < target)
+							{
+								left = mid + 1;
+							}
+							else if (nums[mid] > target)
+							{
+								right = mid - 1;
+							}
+							else
+							{
+								return mid;
+							}
+						}
+						return -1;
+					}
+					
+				}
+				else if (target < nums[mid])
+				{
+					if (dir_t == 1)
+					{
+						right = mid - 1;
+						while (left <= right)
+						{
+							mid = (left + right) / 2;
+							if (nums[mid] < target)
+							{
+								left = mid + 1;
+							}
+							else if (nums[mid] > target)
+							{
+								right = mid - 1;
+							}
+							else
+							{
+								return mid;
+							}
+						}
+						return -1;
+					}
+					else
+					{
+						right = mid - 1;
+					}
+				}
+				else
+				{
+					return mid;
+				}
+			}
+			else
+			{
+				if (dir_t == 1)
+				{
+					right = mid - 1;
+				}
+				else
+				{
+					left = mid + 1;
+				}
+				
+			}
+		}
+		return -1;
+	}
 };
 
 void main_Leetcode()
 {
 	Solution solution;
-	vector<int> vr = { 0, 1, 1, 1, 1, 2 };
-	cout << solution.removeDuplicates(vr) << endl;
+	vector<int> vr = { 5, 6, 7, 8, 9, 10, 0, 1 };
+	cout << solution.search(vr, 5) << endl;
 }
 
