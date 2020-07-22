@@ -349,12 +349,42 @@ public:
 		}
 		return -1;
 	}
+
+	void permute_dfs(vector<vector<int>>& rst, vector<int>& select, vector<int>& use) {
+		if (use.size() == 1)
+		{
+			select.push_back(use.back());
+			rst.push_back(select);
+			return;
+		}
+		vector<bool> visit;
+		for (int i = 0; i < use.size(); i++)
+		{
+			vector<int> new_select(select);
+			new_select.push_back(int(use[i]));
+			vector<int> temp(use);
+			temp.erase(temp.begin() + i);
+			permute_dfs(rst, new_select, temp);
+		}
+	}
+
+	vector<vector<int>> permute(vector<int>& nums) {
+		vector<vector<int>> rst;
+		permute_dfs(rst, vector<int>(), nums);
+		return rst;
+	}
 };
 
 void main_Leetcode()
 {
 	Solution solution;
-	vector<int> vr = { 5, 6, 7, 8, 9, 10, 0, 1 };
-	cout << solution.search(vr, 5) << endl;
+	vector<int> vr = { 5, 6, 7, 8 };
+	auto ret = solution.permute(vr);
+	for (auto a : ret)
+	{
+		for (auto b : a)
+			cout << b << " ";
+		cout << endl;
+	}
 }
 
