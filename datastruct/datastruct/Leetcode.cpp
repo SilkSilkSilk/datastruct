@@ -350,6 +350,7 @@ public:
 		return -1;
 	}
 
+	//深度遍历解决全排列
 	void permute_dfs(vector<vector<int>>& rst, vector<int>& select, vector<int>& use) {
 		if (use.size() == 1)
 		{
@@ -366,6 +367,11 @@ public:
 			temp.erase(temp.begin() + i);
 			permute_dfs(rst, new_select, temp);
 		}
+	}
+
+	//广度遍历解决全排列
+	void permute_bfs(vector<vector<int>>& rst, vector<int>& select, vector<int>& use) {
+		
 	}
 
 	vector<vector<int>> permute(vector<int>& nums) {
