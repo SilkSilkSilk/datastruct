@@ -370,13 +370,44 @@ public:
 	}
 
 	//广度遍历解决全排列
-	void permute_bfs(vector<vector<int>>& rst, vector<int>& select, vector<int>& use) {
-		
+	vector<vector<int>> permute_bfs(vector<int>& nums) {
+		vector<vector<int>> rst;
+		struct bfs
+		{
+			vector<int> select;
+			vector<int> use;
+		};
+		deque<bfs> dq;
+		dq.push_back({ vector<int>(), nums });
+		while(!dq.empty())
+		{
+			auto item = dq.front();
+			dq.pop_front();
+
+			if (item.use.size() == 1)
+			{
+				item.select.push_back(item.use.back());
+				rst.push_back(item.select);
+			}
+			else
+			{
+				for (int i = 0; i < item.use.size(); i++)
+				{
+					vector<int> new_select(item.select);
+					new_select.push_back(item.use[i]);
+					vector<int> temp(item.use);
+					temp.erase(temp.begin() + i);
+					dq.push_back({ new_select, temp });
+				}
+			}
+		}
+		return rst;
 	}
 
 	vector<vector<int>> permute(vector<int>& nums) {
 		vector<vector<int>> rst;
-		permute_dfs(rst, vector<int>(), nums);
+		vector<int> selsect;
+		permute_dfs(rst, selsect, nums);
 		return rst;
 	}
 };
